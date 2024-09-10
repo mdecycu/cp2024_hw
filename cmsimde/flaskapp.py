@@ -592,11 +592,6 @@ def editorhead():
 
     return '''
     <br />
-<!--<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>-->
-<!--<script src="/static/tinymce4/tinymce/tinymce.min.js"></script>-->
-<!-- for ipv6 to work -->
-<!-- <script src="https://mde.tw/cmstemplate/cmsimde/static/tinymce4/tinymce/tinymce.min.js"></script>-->
-<!-- may work for local, ipv4 and ipv6 editing -->
 <script src="/static/tinymce4/tinymce/tinymce.min.js"></script>
 <script src="/static/tinymce4/tinymce/plugins/sh4tinymce/plugin.min.js"></script>
 <link rel = "stylesheet" href = "/static/tinymce4/tinymce/plugins/sh4tinymce/style/style.css">
@@ -620,15 +615,7 @@ tinymce.init({
   toolbar_items_size: 'small',
   file_picker_callback: function(callback, value, meta) {
         cmsFilePicker(callback, value, meta);
-    },
-  templates: [
-    { title: 'Test template 1', content: 'Test 1' },
-    { title: 'Test template 2', content: 'Test 2' }
-  ],
-  content_css: [
-    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-    '//www.tinymce.com/css/codepen.min.css'
-  ]
+    }
 });
 
 function cmsFilePicker(callback, value, meta) {
@@ -2674,7 +2661,6 @@ def set_css2():
         <title>''' + init.Init.site_title + '''</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
